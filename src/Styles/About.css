@@ -1,0 +1,96 @@
+/* General container styling */
+.about-container {
+    display: flex; /* Arrange child elements in a row */
+    align-items: center; /* Vertically align child elements in the center */
+    justify-content: space-between; /* Space between child elements evenly */
+    min-height: 100vh; /* Minimum height of the container is 100% of the viewport height */
+    padding: 0 15px; /* Padding on the left and right sides */
+    background: linear-gradient(to right, #f3f4f6, #ffffff); /* Background gradient from left to right */
+}
+
+/* Left section (Text and Call-to-Action) */
+.left-section {
+    max-width: 50%; /* Maximum width of the left section is 50% of the container */
+}
+
+.left-section h1 {
+    font-size: 3rem; /* Large font size for the heading */
+    font-weight: bold; /* Bold font weight for emphasis */
+    color: #343a40; /* Dark gray color for the heading text */
+}
+
+.left-section p {
+    font-size: 1.25rem; /* Medium-large font size for the paragraph */
+    color: #6c757d; /* Muted gray color for the paragraph text */
+    margin-bottom: 1.5rem; /* Space below the paragraph */
+    margin-right: 20px; /* Space on the right side of the paragraph */
+}
+
+.left-section a.btn {
+    font-size: 1rem; /* Font size for the button text */
+    padding: 10px 20px; /* Padding inside the button */
+    color: white; /* White text color */
+    background-color: #29a847; /* Mint green background color */
+    border-radius: 5px; /* Rounded corners for the button */
+    text-decoration: none; /* Remove underline from the button link */
+}
+
+.app-buttons {
+    display: flex; /* Display buttons in a row */
+    gap: 10px; /* Space between the buttons */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+.app-buttons img {
+    width: 150px; /* Fixed width for the images */
+    height: auto; /* Maintain aspect ratio of the images */
+}
+
+/* Right section (Image) */
+.right-section {
+    max-width: 50%; /* Maximum width of the right section is 50% of the container */
+}
+
+.app-preview {
+    width: 100%; /* Image takes up the full width of its container */
+    height: auto; /* Maintain aspect ratio of the image */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* Responsive design */
+@media (max-width: 768px) { /* Apply these styles on screens 768px wide or smaller */
+    .about-container {
+        flex-direction: column; /* Stack sections vertically instead of horizontally */
+        text-align: center; /* Center-align the text */
+    }
+    .left-section, .right-section {
+        max-width: 100%; /* Sections take up full width on smaller screens */
+    }
+    .app-preview {
+        margin-top: 20px; /* Add space above the image on smaller screens */
+    }
+}
+
+/* Animation for typing effect */
+@keyframes typing {
+    from { width: 0; } /* Start with 0 width */
+    to { width: 100%; } /* Expand to full width */
+}
+
+/* Animation for blinking cursor effect */
+@keyframes blink {
+    from, to { border-color: transparent; } /* Border is invisible at the start and end */
+    50% { border-color: black; } /* Border is visible at the midpoint */
+}
+
+.easytext {
+    color: #28a745; /* Green color for the text */
+    font-weight: bold; /* Bold font weight */
+    font-family: Arial, sans-serif; /* Font family */
+    font-size: 1.5em; /* Larger font size */
+    white-space: nowrap; /* Prevent the text from wrapping to the next line */
+    overflow: hidden; /* Hide the overflow text */
+    border-right: 0.15em solid black; /* Create a black border on the right to simulate a cursor */
+    width: 12ch; /* Limit the width to 12 characters */
+    animation: typing 3.5s steps(12), blink 0.75s step-end infinite; /* Apply typing and blinking animations */
+}

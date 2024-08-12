@@ -1,0 +1,11 @@
+.custom-navbar {
+    background-color: white !important; /* Ensure the background is white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #29a847 !important; 
+}
